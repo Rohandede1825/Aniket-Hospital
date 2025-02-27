@@ -1,4 +1,4 @@
-import { Card } from "../components/Card";
+
 
 export const Dashboard = () => {
     return (
@@ -17,12 +17,10 @@ export const Dashboard = () => {
                     </div>
                 </div>
                 <div className="flex w-full lg:w-[550px] justify-center lg:justify-end mt-9">
-                    <img src="../public/images/8535.jpg" alt="" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-2xl" />
+                    <img src="https://i.pinimg.com/736x/ba/a0/0d/baa00d44eafbd51609a1d6f61a8faa25.jpg" alt="" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-2xl" />
                 </div>
             </div>
-            <div className="w-full max-w-7xl px-4 sm:px-6">
-                <Card />
-            </div>
+            
         </div>
     );
 };
