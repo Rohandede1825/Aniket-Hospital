@@ -1,6 +1,9 @@
 import { useState, ChangeEvent, FormEvent } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 export const Signup = () => {
+    const navigate = useNavigate();
     let [userData, setUserData] = useState({
         username: "",
         email: "",
@@ -23,12 +26,14 @@ export const Signup = () => {
             body: JSON.stringify(userData),
           });
           const data = await response.json();
+
           if(!response.ok){
             console.log(data);
             alert("Something went wrong");
             return;
           }
         console.log(data);
+        navigate('/login');
 
         } catch (error) {
           console.error(error);
@@ -61,12 +66,12 @@ export const Signup = () => {
             className="w-full text-black p-2 mb-3 border border-gray-300 rounded-md"
           />
       
-          <button className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition">
+          <button className="w-full bg-purple-900 text-white py-2 rounded-md hover:opacity-85 transition">
             Signup
           </button>
           <p className="text-center text-sm text-gray-500 mt-4">
             Already have an account?
-            <Link to="/login" className="text-blue-500 hover:text-blue-700 transition">
+            <Link to="/login" className="text-purple-900 hover:text-purple-700 transition">
               Login
             </Link>
           </p>

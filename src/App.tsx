@@ -7,6 +7,7 @@ import './App.css'
 import { Navbar } from './components/Navbar'
 import { About } from './pages/About'
 import { Contact } from './pages/Contact'
+import { AppointmentsList } from './pages/AppointmentList'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path='/signup' element={<Signup />} />
           <Route path='/' element={<Dashboard />} />
           <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/appointment'element={<AppointmentsList />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>

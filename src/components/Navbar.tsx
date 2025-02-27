@@ -20,6 +20,7 @@ export const Navbar = () => {
                     <Link to={'/dashboard'} className="block py-2 px-4 hover:font-bold rounded-md">Dashboard</Link>
                     <Link to={'/about'} className="block py-2 px-4 hover:font-bold rounded-md">About</Link>
                     <Link to={'/contact'} className="block py-2 px-4 hover:font-bold rounded-md">Contact</Link>
+                    <Link to={'/appointment'} className="block py-2 px-4 hover:font-bold rounded-md">Check-list</Link>
                     <Link to={'/login'} className="block py-2 px-4 hover:font-bold rounded-md">Login</Link>
                     <Link to={'/signup'} className="block py-2 px-4 hover:font-bold rounded-md">Signup</Link>
                 </div>
