@@ -15,8 +15,14 @@ export const AppointmentsList = () => {
     const [appointments, setAppointments] = useState<Appointment[]>([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/appointment/getAppointments")
-            .then((response) => response.json())
+        fetch("http://localhost:5000/api/appointment/getAppointments", {
+            method: "GET",
+            credentials: "include", 
+        })
+            .then((response) => {
+                if (!response.ok) throw new Error("Failed to fetch appointments");
+                return response.json();
+            })
             .then((data: Appointment[]) => setAppointments(data))
             .catch((error) => console.error("Error fetching appointments", error));
     }, []);
