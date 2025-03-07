@@ -8,25 +8,29 @@ import { Navbar } from './components/Navbar'
 import { About } from './pages/About'
 import { Contact } from './pages/Contact'
 import { AppointmentsList } from './pages/AppointmentList'
+import { Footer } from './pages/Footer';
 
 function App() {
 
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <BrowserRouter>
         <Navbar />
-        <Routes>
-          <Route path='/login' element={<Login />} />
-          <Route path='/signup' element={<Signup />} />
-          <Route path='/' element={<Dashboard />} />
-          <Route path='/dashboard' element={<Dashboard />} />
-          <Route path='/appointment'element={<AppointmentsList />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} />
-        </Routes>
+        <div className="flex-grow">
+          <Routes>
+            <Route path='/login' element={<Login />} />
+            <Route path='/signup' element={<Signup />} />
+            <Route path='/' element={<Dashboard />} />
+            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/appointment' element={<AppointmentsList />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
+          </Routes>
+        </div>
+        <Footer />
       </BrowserRouter>
-    </>
+    </div>
   )
 }
 
