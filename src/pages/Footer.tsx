@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
                 </div>
             </div>
             <div className="text-sm">
-                <p>&copy; {new Date().getFullYear()} Hospital Name. All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} Aniket Hospital. All rights reserved. @2025</p>
                 <p>Privacy Policy | Terms of Service</p>
             </div>
         </footer>
