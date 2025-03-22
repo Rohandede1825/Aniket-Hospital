@@ -15,7 +15,7 @@ export const AppointmentsList = () => {
     const [appointments, setAppointments] = useState<Appointment[]>([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/appointment/getAppointments", {
+        fetch(`${import.meta.env.VITE_API_URL}/api/appointment/getAppointments`, {
             method: "GET",
             credentials: "include", 
         })

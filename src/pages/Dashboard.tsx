@@ -1,5 +1,7 @@
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
+import react from "react";
 import { FaUserMd, FaHospitalSymbol, FaCalendarCheck } from "react-icons/fa";
+import { JSX } from "react";
 
 const Card = ({ icon, title, description, buttonText }: {
   icon: JSX.Element;
@@ -18,6 +20,7 @@ const Card = ({ icon, title, description, buttonText }: {
     </div>
   );
 };
+
 export const Dashboard = () => {
     return (
         <div className="bg-purple-50 flex flex-col items-center w-full min-h-screen">
