@@ -26,7 +26,7 @@ export  const Login = () => {
                 body: JSON.stringify(userData),
                 credentials: "include",
               });
-              const data = await response.json();
+               await response.json();
               
               if(response.ok){
                 navigate('/dashboard');

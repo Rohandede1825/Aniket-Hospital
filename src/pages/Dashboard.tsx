@@ -1,6 +1,5 @@
-// import {Link} from "react-router-dom";
-import react from "react";
-import { FaUserMd, FaHospitalSymbol, FaCalendarCheck } from "react-icons/fa";
+// import { FaUserMd, FaHospitalSymbol, FaCalendarCheck } from "react-icons/fa";
+import {FaUserMd, FaHospitalSymbol, FaCalendarCheck} from "react-icons/fa";
 import { JSX } from "react";
 
 const Card = ({ icon, title, description, buttonText }: {
