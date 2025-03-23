@@ -1,6 +1,10 @@
 import { useState } from "react";
+import { useAuth } from '../context/AuthContext';
+import { useNavigate } from "react-router-dom";
 
 export const Contact = () => {
+    const { isAuthenticated } = useAuth();
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -9,26 +13,33 @@ export const Contact = () => {
         time: "",
         reason_of_visit: ""
     });
-    //@ts-ignore
-    const handleChange = (e) => {
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    //@ts-ignore
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
             const response = await fetch(`${import.meta.env.VITE_API_URL}/api/appointment/createAppointment`, {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
+                headers: { 
+                    "Content-Type": "application/json",
+                    ...(isAuthenticated && { credentials: "include" })
+                },
                 body: JSON.stringify(formData),
             });
+            
             if (response.ok) {
                 alert("Appointment booked successfully!");
                 setFormData({ name: "", email: "", phone_no: "", date: "", time: "", reason_of_visit: "" });
+                if (isAuthenticated) {
+                    navigate('/appointment');
+                }
             }
         } catch (error) {
             console.error("Error booking appointment", error);
+            alert("Failed to book appointment");
         }
     };
 

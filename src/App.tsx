@@ -10,30 +10,39 @@ import { Contact } from './pages/Contact'
 import { AppointmentsList } from './pages/AppointmentList'
 import { Footer } from './pages/Footer';
 import Services from './pages/Services'
+import { AuthProvider } from './context/AuthContext';
+import { ProtectedRoute } from './components/ProtectedRoute';
 
 function App() {
-
-
   return (
-    <div className="flex flex-col min-h-screen">
-      <BrowserRouter>
-        <Navbar />
-        <div className="flex-grow">
-          <Routes>
-            <Route path='/login' element={<Login />} />
-            <Route path='/signup' element={<Signup />} />
-            <Route path='/' element={<Dashboard />} />
-            <Route path='/dashboard' element={<Dashboard />} />
-            <Route path='/appointment' element={<AppointmentsList />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/services' element={<Services />} />
-          </Routes>
-        </div>
-        <Footer />
-      </BrowserRouter>
-    </div>
-  )
+    <AuthProvider>
+      <div className="flex flex-col min-h-screen">
+        <BrowserRouter>
+          <Navbar />
+          <div className="flex-grow">
+            <Routes>
+              {/* Public routes */}
+              <Route path='/login' element={<Login />} />
+              <Route path='/signup' element={<Signup />} />
+              <Route path='/' element={<Dashboard />} />
+              <Route path='/dashboard' element={<Dashboard />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/contact' element={<Contact />} />
+              <Route path='/services' element={<Services />} />
+              
+              {/* Protected route */}
+              <Route path='/appointment' element={
+                <ProtectedRoute>
+                  <AppointmentsList />
+                </ProtectedRoute>
+              } />
+            </Routes>
+          </div>
+          <Footer />
+        </BrowserRouter>
+      </div>
+    </AuthProvider>
+  );
 }
 
 export default App
