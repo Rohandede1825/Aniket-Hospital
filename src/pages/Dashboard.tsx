@@ -44,7 +44,7 @@ export const Dashboard = () => {
       </div>
 
       <div className="mb-3">
-        <img src="https://res.cloudinary.com/deqwiyyxl/image/upload/v1742710135/aniket_hospital_pic_oy5kdh.jpg" alt="" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-2xl" />
+        <img src="https://res.cloudinary.com/deqwiyyxl/image/upload/v1742711819/aniket_hospital_pic_kdkonw.jpg" alt="" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-2xl" />
       </div>
 
       <div className="flex flex-col md:flex-row gap-6 justify-center items-center p-8 bg-gray-100">
@@ -57,7 +57,7 @@ export const Dashboard = () => {
         />
         <Card
           icon={<FaUserMd />}
-          title="Dr.Ajau T. Burande"
+          title="Dr.Ajay T. Burande"
           name="Dr.Sunita Ajay Burande"
           description="MBBS, MD - Obstetrics & Gynaecology, DGO, DNB - Obstetrics & Gynecology, Fellowship in Minimal Access Surgery"
           buttonText= "Book Appointment"
