@@ -1,4 +1,5 @@
 import { FaUserMd } from "react-icons/fa";
+import { Phone, Mail, Clock, MapPin } from "lucide-react";
 
 export const About = () => {
     const doctors = [
@@ -49,10 +50,25 @@ export const About = () => {
                 </div>
             </section>
 
+            <div className="flex flex-wrap justify-center items-center gap-6 p-8 bg-white shadow-md rounded-lg">
+      {[
+        { icon: <Phone className="text-green-500" size={28} />, bg: "bg-green-100", text: "8390090016 / 7887471999", subtext: "Call Today" },
+        { icon: <Mail className="text-orange-500" size={28} />, bg: "bg-orange-100", text: "aniketnetrayalay@gmail.com", subtext: "Contact Hospital" },
+        { icon: <Clock className="text-blue-500" size={28} />, bg: "bg-blue-100", text: "9 AM - 7 PM", subtext: "Open Hours" },
+        { icon: <MapPin className="text-pink-500" size={28} />, bg: "bg-pink-100", text: "Govardhan Ghat, Borban Factory, Nanded, Maharashtra 431601", subtext: "Our Location" }
+      ].map((item, index) => (
+        <div key={index} className="flex flex-col items-center p-6 rounded-lg shadow-sm border w-64 text-center">
+          <div className={`${item.bg} p-4 rounded-full`}>{item.icon}</div>
+          <p className="text-lg font-semibold text-blue-900 mt-2">{item.text}</p>
+          <p className="text-gray-500 text-sm">{item.subtext}</p>
+        </div>
+      ))}
+    </div>
+
           
 
             {/* Doctors Section */}
-            <section className="container mx-auto px-6">
+            <section className="container mx-auto px-6 mt-5">
                 <h2 className="text-3xl font-bold text-purple-900 mb-8 text-center">Our Medical Team</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {doctors.map((doctor, index) => (

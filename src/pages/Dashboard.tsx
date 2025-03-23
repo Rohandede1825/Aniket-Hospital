@@ -50,25 +50,25 @@ const featureData = [
       id: 1,
       logo: <FaUserDoctor className="text-4xl text-purple-900" />,
       title: "Gynaecology & Obstetrics",
-      description: "Gynecology and obstetrics are two closely related fields of medicine that focus on women's health, particularly during reproductive years and childbirth."
+      description: "Gynecology and obstetrics are two closely related fields of medicine that focus on women's health, particularly during reproductive years and childbirth. Gynecology deals with the health of the female reproductive system and associated disorders and Obstetrics focuses on pregnancy, childbirth, and the postpartum period"
   },
   {
       id: 2,
       logo: <FaHeart className="text-4xl text-purple-900" />,
       title: "Infertility Treatment",
-      description: "Infertility treatment encompasses a variety of medical interventions aimed at helping individuals or couples conceive."
+      description: "Infertility treatment encompasses a variety of medical interventions aimed at helping individuals or couples conceive. Initial Evaluation: Comprehensive testing for both partners, including medical history, physical exams, blood tests, and imaging studies to identify any underlying issues."
   },
   {
       id: 3,
       logo: <FaBaby className="text-4xl text-purple-900" />,
       title: "Laparoscopy Surgery",
-      description: "Evaluating conditions such as endometriosis, pelvic inflammatory disease, and ovarian cysts. Assessing unexplained pelvic pain or infertility."
+      description: "valuating conditions such as endometriosis, pelvic inflammatory disease, and ovarian cysts. Assessing unexplained pelvic pain or infertility. Laparoscopy involves the use of a laparoscope, a thin, lighted tube with a camera, which is inserted through small incisions in the abdomen."
   },
   {
       id: 4,
       logo: <GiMedicines className="text-4xl text-purple-900" />,
       title: "Follow-Up and Preventive Care",
-      description: "Regular Monitoring: Schedule follow-up visits to track progress, adjust treatment as needed, and address any ongoing concerns."
+      description: "Regular Monitoring: Schedule follow-up visits to track progress, adjust treatment as needed, and address any ongoing concerns. Long-Term Health Strategies: Emphasize preventive care and education to promote your overall well-being and empower you with tools for a healthy future."
   }
 ];
 
