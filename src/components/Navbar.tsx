@@ -24,6 +24,7 @@ export const Navbar = () => {
                 <div className={`lg:flex space-x-4 gap-4 font-semibold mr-4 ${isOpen ? "flex flex-col absolute top-16 right-4 bg-purple-800 p-4 rounded-md" : "hidden lg:flex"}`}>
                     
                     <Link to={'/dashboard'} className="block py-2 px-4 hover:font-bold rounded-md">Dashboard</Link>
+                    <Link to={'/services'} className="block py-2 px-4 hover:font-bold rounded-md">Services</Link>
                     <Link to={'/about'} className="block py-2 px-4 hover:font-bold rounded-md">About</Link>
                     <Link to={'/contact'} className="block py-2 px-4 hover:font-bold rounded-md">Contact</Link>
                     <Link to={'/appointment'} className="block py-2 px-4 hover:font-bold rounded-md">Check-list</Link>

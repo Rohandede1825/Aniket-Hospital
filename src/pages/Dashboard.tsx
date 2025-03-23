@@ -1,25 +1,59 @@
 // import { FaUserMd, FaHospitalSymbol, FaCalendarCheck } from "react-icons/fa";
 import { FaUserMd, FaHospitalSymbol, FaCalendarCheck } from "react-icons/fa";
 import { JSX } from "react";
+import FeatureCard from "../components/FeatureCard";
+import { FaUserDoctor, FaHeart, FaBaby } from "react-icons/fa6";
+import { GiMedicines } from "react-icons/gi";
 
 const Card = ({ icon, title, description, buttonText }: {
   icon: JSX.Element;
-  name?:string,
+  name?: string;
   title: string;
   description: string;
   buttonText: string;
 }) => {
   return (
-    <div className="bg-white shadow-lg rounded-2xl p-6 flex flex-col items-center text-center w-full max-w-sm">
-      <div className="text-5xl text-blue-500 mb-4">{icon}</div>
-      <h3 className="text-lg font-bold text-blue-800">{title}</h3>
-      <p className="text-gray-600 mt-2">{description}</p>
-      <button className="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+    <div className="bg-white shadow-lg hover:shadow-xl rounded-2xl p-6 flex flex-col items-center text-center w-full max-w-sm transition-all duration-300">
+      <div className="text-5xl text-purple-900 mb-4 transform hover:scale-110 transition-transform duration-300">
+        {icon}
+      </div>
+      <h3 className="text-lg font-bold text-purple-950 mb-2">{title}</h3>
+      <p className="text-gray-600 mt-2 min-h-[60px]">{description}</p>
+      <button className="mt-4 bg-purple-950 text-white px-6 py-2 rounded-lg hover:bg-purple-800 transition-colors duration-300 font-medium">
         {buttonText}
       </button>
     </div>
   );
 };
+
+
+
+const featureData = [
+  {
+      id: 1,
+      logo: <FaUserDoctor className="text-4xl text-purple-900" />,
+      title: "Gynaecology & Obstetrics",
+      description: "Gynecology and obstetrics are two closely related fields of medicine that focus on women's health, particularly during reproductive years and childbirth."
+  },
+  {
+      id: 2,
+      logo: <FaHeart className="text-4xl text-purple-900" />,
+      title: "Infertility Treatment",
+      description: "Infertility treatment encompasses a variety of medical interventions aimed at helping individuals or couples conceive."
+  },
+  {
+      id: 3,
+      logo: <FaBaby className="text-4xl text-purple-900" />,
+      title: "Laparoscopy Surgery",
+      description: "Evaluating conditions such as endometriosis, pelvic inflammatory disease, and ovarian cysts. Assessing unexplained pelvic pain or infertility."
+  },
+  {
+      id: 4,
+      logo: <GiMedicines className="text-4xl text-purple-900" />,
+      title: "Follow-Up and Preventive Care",
+      description: "Regular Monitoring: Schedule follow-up visits to track progress, adjust treatment as needed, and address any ongoing concerns."
+  }
+];
 
 export const Dashboard = () => {
   return (
@@ -47,25 +81,36 @@ export const Dashboard = () => {
         <img src="https://res.cloudinary.com/deqwiyyxl/image/upload/v1742711819/aniket_hospital_pic_kdkonw.jpg" alt="" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-2xl" />
       </div>
 
-      <div className="flex flex-col md:flex-row gap-6 justify-center items-center p-8 bg-gray-100">
+
+    <div className="text-center text-2xl font-semibold p-4">
+      We are experienced in providing a wide range of services
+    </div>
+      <div className="flex flex-col md:flex-row gap-6 justify-center items-center p-8 bg-purple-50">
         <Card
           icon={<FaUserMd />}
           title="Dr.Sunita Ajay Burande"
           name="Dr.Sunita Ajay Burande"
-          description="MBBS, MD - Obstetrics & Gynaecology, DGO, DNB - Obstetrics & Gynecology, Fellowship in Minimal Access Surgery"
+          description="MBBS, DGO, gynecologist, obstetrician, infertility specialist"
           buttonText= "Book Appointment"
         />
         <Card
           icon={<FaUserMd />}
           title="Dr.Ajay T. Burande"
           name="Dr.Sunita Ajay Burande"
-          description="MBBS, MD - Obstetrics & Gynaecology, DGO, DNB - Obstetrics & Gynecology, Fellowship in Minimal Access Surgery"
+          description="MBBS, DOMS , Eye-specialist,"
+          buttonText= "Book Appointment"
+        />
+        <Card
+          icon={<FaUserMd />}
+          title="Dr.Aniket Ajay Burande"
+          name="Dr.Aniket Ajay Burande"
+          description="MBBS,"
           buttonText= "Book Appointment"
         />
         <Card
           icon={<FaHospitalSymbol />}
           title="Locations & Directions"
-          description="Find any of our 300+ locations."
+          description="location"
           buttonText="Get directions"
         />
         <Card
@@ -76,9 +121,46 @@ export const Dashboard = () => {
         />
       </div>
 
+      <div className="mt-8 mb-12 w-full max-w-7xl mx-auto">
+        <h2 className="text-2xl font-bold text-purple-900 mb-6 px-6">Our Medical Services</h2>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6">
+            {featureData.map(feature => (
+                <div key={feature.id} className="h-full transform hover:scale-105 transition-transform duration-300">
+                    <div className="h-full">
+                        <FeatureCard
+                            logo={feature.logo}
+                            title={feature.title}
+                            description={feature.description}
+                        />
+                    </div>
+                </div>
+            ))}
+        </div>
+      </div>
 
-      
 
+        <div>
+    <div className="text-2xl font-bold text-center mb-8">
+        <h1 className="text-purple-900">About Aniket Hospital</h1>
+    </div>
+
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 space-y-6 font-semibold text-gray-700">
+            <p className="text-base sm:text-lg leading-relaxed">
+                At Aniket Hospital, we are dedicated to providing comprehensive and compassionate care for women of all ages. Our experienced team specializes in a wide range of gynecological services, from routine exams to advanced treatments. Your health and comfort are our top priorities.
+            </p>
+
+            <p className="text-base sm:text-lg leading-relaxed">
+                Your health and well-being are our top priorities. We provide compassionate and comprehensive gynecological care for women of all ages. Whether you're seeking routine exams, pregnancy care, or specialized treatments, our experienced team is here to support you.
+            </p>
+
+            <p className="text-base sm:text-lg leading-relaxed">
+                At Aniket Hospital, our team is led by Dr. Sunita Burande, a board-certified gynecologist with 25 years of experience. We believe in empowering women through education and personalized care. Our welcoming office environment is designed to make every visit comfortable and reassuring.
+            </p>
+        </div>
+    </div>
+</div>
     </div>
   );
 };
