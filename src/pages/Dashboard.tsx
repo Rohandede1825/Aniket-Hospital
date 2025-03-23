@@ -145,7 +145,7 @@ export const Dashboard = () => {
         <h1 className="text-purple-900">About Aniket Hospital</h1>
     </div>
 
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
         <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 space-y-6 font-semibold text-gray-700">
             <p className="text-base sm:text-lg leading-relaxed">
                 At Aniket Hospital, we are dedicated to providing comprehensive and compassionate care for women of all ages. Our experienced team specializes in a wide range of gynecological services, from routine exams to advanced treatments. Your health and comfort are our top priorities.
