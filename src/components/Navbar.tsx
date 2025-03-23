@@ -22,9 +22,12 @@ export const Navbar = () => {
                     <Logo />
                 </div>
 
+                
+                <Link to={'/dashboard'} >
                 <p className="font-bold text-2xl gap-0">
                    Aniket Hospital
                 </p>
+                </Link>
 
                 <div className="lg:hidden cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
                     {isOpen ? <X size={28} /> : <Menu size={28} />}
