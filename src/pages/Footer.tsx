@@ -6,7 +6,7 @@ export const Footer: React.FC = () => {
             <div className="flex items-center">
                 <img src="https://res.cloudinary.com/deqwiyyxl/image/upload/v1740660375/s7tqvhdluz5z8nzouafj.jpg" alt="Hospital Logo" className="h-12 w-12 mr-4" />
                 <div>
-                 <p className='font-semibold'>Govardhan ghat, Borban factory, Nanded, Maharashtra 431601 || Contact :- 02462-248108</p>
+                 <p className='font-semibold'>Govardhan ghat, Borban factory, Nanded, Maharashtra 431601 || Contact :- 8390090016, 7887471999</p>
                 </div>
             </div>
             <div className="text-sm">

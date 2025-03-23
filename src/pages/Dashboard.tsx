@@ -77,7 +77,7 @@ export const Dashboard = () => {
     <div className="bg-purple-50 flex flex-col items-center w-full min-h-screen">
       <div className="flex flex-wrap justify-center items-center w-full max-w-7xl px-4 sm:px-6 py-12 lg:flex-nowrap">
         <div className="flex flex-col w-full lg:w-1/2 gap-4 text-center lg:text-left">
-          <h4 className="text-lg sm:text-xl md:text-2xl text-black font-semibold">20+ years of experience</h4>
+          <h4 className="text-lg sm:text-xl md:text-2xl text-black font-semibold">25+ years of experience</h4>
           <h1 className="text-purple-950 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             Compassionate Care for Every Stage of Womanhood
           </h1>
@@ -161,6 +161,28 @@ export const Dashboard = () => {
         <h1 className="text-purple-900">About Aniket Hospital</h1>
     </div>
 
+    {/* Hospital Gallery Section */}
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <img 
+                src="https://res.cloudinary.com/deqwiyyxl/image/upload/v1742726439/hospital_zn6qzs.jpg" 
+                alt="Hospital Front View" 
+                className="w-full h-64 object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+            <img 
+                src="https://res.cloudinary.com/deqwiyyxl/image/upload/v1742726863/IMG-20250323-WA0004_1_nkmfiw.jpg" 
+                alt="Hospital Interior" 
+                className="w-full h-64 object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+            <img 
+                src="https://res.cloudinary.com/deqwiyyxl/image/upload/v1742726483/machine_ygpqhg.jpg" 
+                alt="Medical Equipment" 
+                className="w-full h-64 object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+        </div>
+    </div>
+
+    {/* Continue with existing about text section */}
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
         <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 space-y-6 font-semibold text-gray-700">
             <p className="text-base sm:text-lg leading-relaxed">
