@@ -164,6 +164,21 @@ export const Dashboard = () => {
     {/* Hospital Gallery Section */}
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <img 
+                src="https://res.cloudinary.com/deqwiyyxl/image/upload/v1742733445/3_yqgw4x.jpg" 
+                alt="Medical Equipment" 
+                className="w-full h-64 object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+            <img 
+                src="https://res.cloudinary.com/deqwiyyxl/image/upload/v1742733445/1_skpwpl.jpg" 
+                alt="Medical Equipment" 
+                className="w-full h-64 object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+            <img 
+                src="https://res.cloudinary.com/deqwiyyxl/image/upload/v1742733445/2_twd9zs.jpg" 
+                alt="Medical Equipment" 
+                className="w-full h-64 object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
             <img 
                 src="https://res.cloudinary.com/deqwiyyxl/image/upload/v1742726439/hospital_zn6qzs.jpg" 
                 alt="Hospital Front View" 
@@ -179,6 +194,7 @@ export const Dashboard = () => {
                 alt="Medical Equipment" 
                 className="w-full h-64 object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
             />
+           
         </div>
     </div>
 
