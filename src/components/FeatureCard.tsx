@@ -1,19 +1,23 @@
-import React, { ReactElement } from "react";
+import React from 'react';
 
 interface FeatureCardProps {
-  logo: ReactElement; // Changed to ReactElement to accept React icons
+  logo: React.ReactNode;
   title: string;
   description: string;
 }
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ logo, title, description }) => {
   return (
-    <div className="bg-white shadow-lg hover:shadow-xl rounded-2xl p-6 flex flex-col items-center text-center min-h-[320px] w-full">
-      <div className="w-20 h-20 rounded-full bg-purple-50 flex items-center justify-center mb-6">
+    <div className="bg-white shadow-lg hover:shadow-xl rounded-2xl p-6 flex flex-col items-center text-center min-h-[400px] h-full transition-all duration-300">
+      <div className="text-4xl mb-4 transform hover:scale-110 transition-transform duration-300">
         {logo}
       </div>
-      <h3 className="text-xl font-semibold mb-4 text-purple-900">{title}</h3>
-      <p className="text-gray-600 text-sm leading-relaxed line-clamp-4">{description}</p>
+      <h3 className="text-xl font-bold text-purple-950 mb-4">{title}</h3>
+      <div className="flex-grow overflow-auto">
+        <p className="text-gray-600 text-base leading-relaxed">
+          {description}
+        </p>
+      </div>
     </div>
   );
 };
