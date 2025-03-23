@@ -1,4 +1,4 @@
-import React from "react";
+import React, { JSX } from "react";
 import { FaUserMd, FaBaby, FaHeartbeat } from "react-icons/fa";
 import { GiMedicines } from "react-icons/gi";
 
