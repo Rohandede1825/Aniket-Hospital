@@ -12,6 +12,12 @@ export const Navbar = () => {
                 <div className="rounded-full bg-purple-900">
                     <Logo />
                 </div>
+
+                <p className="font-bold text-2xl gap-0">
+                   Aniket Hospital
+                </p>
+
+
                 <div className="lg:hidden cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
                     {isOpen ? <X size={28} /> : <Menu size={28} />}
                 </div>
