@@ -1,9 +1,9 @@
-// import { FaUserMd, FaHospitalSymbol, FaCalendarCheck } from "react-icons/fa";
 import { FaUserMd, FaHospitalSymbol, FaCalendarCheck } from "react-icons/fa";
 import { JSX } from "react";
 import FeatureCard from "../components/FeatureCard";
 import { FaUserDoctor, FaHeart, FaBaby } from "react-icons/fa6";
 import { GiMedicines } from "react-icons/gi";
+import { useNavigate } from 'react-router-dom';
 
 const Card = ({ icon, title, description, buttonText }: {
   icon: JSX.Element;
@@ -12,6 +12,22 @@ const Card = ({ icon, title, description, buttonText }: {
   description: string;
   buttonText: string;
 }) => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    switch(buttonText) {
+      case "Book Appointment":
+      case "Schedule now":
+        navigate('/contact');
+        break;
+      case "Get directions":
+        window.open('https://maps.google.com/?q=Aniket+Hospital+Nanded', '_blank');
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
     <div className="bg-white shadow-lg hover:shadow-xl rounded-2xl p-6 flex flex-col items-center text-center w-full max-w-sm transition-all duration-300">
       <div className="text-5xl text-purple-900 mb-4 transform hover:scale-110 transition-transform duration-300">
@@ -19,14 +35,15 @@ const Card = ({ icon, title, description, buttonText }: {
       </div>
       <h3 className="text-lg font-bold text-purple-950 mb-2">{title}</h3>
       <p className="text-gray-600 mt-2 min-h-[60px]">{description}</p>
-      <button className="mt-4 bg-purple-950 text-white px-6 py-2 rounded-lg hover:bg-purple-800 transition-colors duration-300 font-medium">
+      <button 
+        onClick={handleButtonClick}
+        className="mt-4 bg-purple-950 text-white px-6 py-2 rounded-lg hover:bg-purple-800 transition-colors duration-300 font-medium"
+      >
         {buttonText}
       </button>
     </div>
   );
 };
-
-
 
 const featureData = [
   {
@@ -72,7 +89,6 @@ export const Dashboard = () => {
           </div>
         </div>
         <div className="flex w-full lg:w-[550px] justify-center lg:justify-end mt-9">
-          {/* <img src="https://res.cloudinary.com/deqwiyyxl/image/upload/v1742710135/aniket_hospital_pic_oy5kdh.jpg" alt="" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-2xl" /> */}
           <img src="https://i.pinimg.com/736x/ba/a0/0d/baa00d44eafbd51609a1d6f61a8faa25.jpg" alt="" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg rounded-2xl" />
         </div>
       </div>
