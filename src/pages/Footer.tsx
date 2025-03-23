@@ -6,7 +6,11 @@ export const Footer: React.FC = () => {
             <div className="flex items-center">
                 <img src="https://res.cloudinary.com/deqwiyyxl/image/upload/v1740660375/s7tqvhdluz5z8nzouafj.jpg" alt="Hospital Logo" className="h-12 w-12 mr-4" />
                 <div>
-                 <p className='font-semibold'>Govardhan ghat, Borban factory, Nanded, Maharashtra 431601 || Contact :- 8390090016, 7887471999</p>
+                    <p className='font-semibold'>
+                        Govardhan ghat, Borban factory, Nanded, Maharashtra 431601 || Contact: {' '}
+                        <a href="tel:+918390090016" className="hover:underline">8390090016</a>, {' '}
+                        <a href="tel:+917887471999" className="hover:underline">7887471999</a>
+                    </p>
                 </div>
             </div>
             <div className="text-sm">
