@@ -194,6 +194,16 @@ export const Dashboard = () => {
                 alt="Medical Equipment" 
                 className="w-full h-64 object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
             />
+            <img 
+                src="https://res.cloudinary.com/deqwiyyxl/image/upload/v1742831012/WhatsApp_Image_2025-03-24_at_15.43.03_232cde91_bltvx5.jpg" 
+                alt="Medical Equipment" 
+                className="w-full h-64 object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
+            <img 
+                src="https://res.cloudinary.com/deqwiyyxl/image/upload/v1742831200/WhatsApp_Image_2025-03-24_at_15.43.02_9d4f308c_ezrtgg.jpg" 
+                alt="Medical Equipment" 
+                className="w-full h-64 object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+            />
            
         </div>
     </div>
