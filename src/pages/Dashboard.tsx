@@ -70,6 +70,9 @@ const featureData = [
       title: "Follow-Up and Preventive Care",
       description: "Regular Monitoring: Schedule follow-up visits to track progress, adjust treatment as needed, and address any ongoing concerns. Long-Term Health Strategies: Emphasize preventive care and education to promote your overall well-being and empower you with tools for a healthy future."
   }
+
+
+  
 ];
 
 export const Dashboard = () => {
